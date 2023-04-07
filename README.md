@@ -23,6 +23,15 @@ Kullanılan Kütüphaneler:
  - EntityFrameWorkCore.SqlServer
  - EntityFrameWorkCore.Tools
 
+Role:
+ - Role based role based authorization
+
+Login:
+ - Kayıt ve giriş işlemleri kütüphane ile yapıldı ve çalışıyor / logout işlemi henüz yapılmadı
+
+Dinamik/Static:
+ - Latest New ,Latest Propertie gibi bazı alanlar dinamik yapıda
+
 Sayfalar:
  - SignIn 
  - SignUp
@@ -57,6 +66,11 @@ User Profile:
  - Purchase History
  - Messages
  - Reservation
+
+Eksikler:
+ - Aşağıda ki ss ler dışında ki bir çok sayfa sadece frontend olarak var (bazıları yok :( ) güncellenecek sayfalar
+ - Yeni bir propertie yi sadece admin ekleyebiliyor agentlere özel olacak admin sadece silebilecek
+ - Agent Contact kısmı eksik
 
  ## Ekran Görüntüleri
 ![alt text](https://raw.githubusercontent.com/AhmetDono/Dono-Agency/main/ss/tables.png)
