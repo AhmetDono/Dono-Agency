@@ -1,0 +1,117 @@
+﻿@Model EntityLayer.Concrete.Agent
+@{
+    ViewData["Title"] = "SingleAgent";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+<!-- ======= Intro Single ======= -->
+<section class="intro-single">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-8">
+                <div class="title-single-box">
+                    <h1 class="title-single">Margaret Stone</h1>
+                    <span class="color-text-a">Agent Immobiliari</span>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+                <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Agents</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            Margaret Stone
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Intro Single -->
+<!-- ======= Agent Single Single ======= -->
+<section class="agent-single">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="agent-avatar-box">
+                            <img src="@Model.AgentPhoto" alt="" class="agent-avatar img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-5 section-md-t3">
+                        <div class="agent-info-box">
+                            <div class="agent-title">
+                                <div class="title-box-d">
+                                    <h3 class="title-d">
+                                        @Model.AgentName
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="agent-content mb-3">
+                                <p class="content-d color-text-a">
+                                    @Model.AgentDescription
+                                </p>
+                                <div class="info-agents color-a">
+                                    <p>
+                                        <strong>Phone: </strong>
+                                        <span class="color-text-a"> + @Model.AgentPhone </span>
+                                    </p>
+                                    <p>
+                                        <strong>Email: </strong>
+                                        <span class="color-text-a"> @Model.AgentEmail</span>
+                                    </p>
+                                    <p>
+                                        <strong>skype: </strong>
+                                        <span class="color-text-a"> Margaret.Es</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="socials-footer">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="#" class="link-one">
+                                            <i class="bi bi-facebook" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="link-one">
+                                            <i class="bi bi-twitter" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="link-one">
+                                            <i class="bi bi-instagram" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="link-one">
+                                            <i class="bi bi-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= End Agent Single Single ======= -->
+
+<div class="col-md-12 section-t8">
+    <div class="title-box-d">
+        <h3 class="title-d">
+            <a href="/AgentsProperties/Index/@Model.AgentID">
+                Click here to see all Properties this Agent has
+            </a>
+        </h3>
+    </div>
+</div>
+
+@*<partial name="~/Views/Agent/MyProperties.cshtml" />*@

@@ -1,0 +1,114 @@
+﻿@model EntityLayer.Concrete.Propertie
+
+@{
+    ViewData["Title"] = "AddPropertie";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms/</span> Vertical Layouts</h4>
+
+    <!-- Basic Layout -->
+    <div class="row">
+        <div class="col-xl">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Basic Layout</h5>
+                    <small class="text-muted float-end">Add New Propertie</small>
+                </div>
+                <div class="card-body">
+                    <form method="post" >
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-fullname">Propertie Name</label>
+                            <input type="text" class="form-control" id="basic-default-fullname" placeholder="Propertie Name" asp-for="PropertieName" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-company">Propertie Price</label>
+                            <input type="text" class="form-control" id="basic-default-company" placeholder="Price" asp-for="PropertiePrice" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-company">Propertie Location</label>
+                            <input type="text" class="form-control" id="basic-default-company" placeholder="Chicago, IL 606543" asp-for="PropertieLocation" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="membership">Propertie Type:</label>
+                            <select asp-for="PropertieType">
+                                <option value="Rental" selected>Rental</option>
+                                <option value="On Sale">On Sale</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-company">Propertie Area</label>
+                            <input type="text" class="form-control" id="basic-default-company" placeholder="X m^2" asp-for="Area" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-company">Agent ID</label>
+                            <input type="text" class="form-control" id="basic-default-company" placeholder="11 gir" asp-for="AgentID" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="membership">Number of Bed:</label>
+                            <select asp-for="Bed">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+
+
+                            <label for="membership">Number of Bath:</label>
+                            <select asp-for="Bath">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+
+
+                            <label for="membership">Number of Garage:</label>
+                            <select asp-for="Garage">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type="checkbox" asp-for="Balcony" value="@true">
+                            <label> Balcony</label>
+                            <input type="checkbox" asp-for="Deck" value="@true">
+                            <label> Deck</label>
+                            <input type="checkbox" asp-for="Parking" value="@true">
+                            <label> Parking</label><br />
+                            <input type="checkbox" asp-for="SportCourts" value="@true">
+                            <label> Sport Courts</label>
+                            <input type="checkbox" asp-for="SunRoom" value="@true">
+                            <label> Sun Room</label>
+                            <input type="checkbox" asp-for="OutdoorKitchen" value="@true">
+                            <label> OutDoor Kitchen</label><br />
+                            <input type="checkbox" asp-for="CableTV" value="@true">
+                            <label> Cable</label>
+                            <input type="checkbox" asp-for="Internet" value="@true">
+                            <label> Internet</label>
+                            <input type="checkbox" asp-for="ConcreteFlooring" value="@true">
+                            <label> Concrete Flooring</label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-message">Propertie Description</label>
+                            <textarea id="basic-default-message"
+                                      class="form-control"
+                                      placeholder="Lorem İmpus"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">ADD NEW PROPERTIE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

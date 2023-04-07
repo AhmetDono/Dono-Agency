@@ -1,0 +1,30 @@
+﻿@using DonoAgency.Models
+@model RoleViewModel 
+@{
+    ViewData["Title"] = "AddRole";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <!-- Basic Layout -->
+    <div class="row">
+        <div class="col-xl">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <small class="text-muted float-end">Add New Role</small>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-fullname">Role Name</label>
+                            <input type="text" class="form-control" id="basic-default-fullname" placeholder="Role Name" asp-for="name" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">ADD NEW ROLE</button>
+                        <a class="btn btn-danger" href="/Admin/AdminRole/Index"> Cancel </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

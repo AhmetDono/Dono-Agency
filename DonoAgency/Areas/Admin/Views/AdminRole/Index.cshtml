@@ -1,0 +1,52 @@
+﻿@using EntityLayer.Concrete
+@model List<AppRole>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<hr class="my-5" />
+
+<!-- Contextual Classes -->
+
+<div class="card">
+    <h5 class="card-header">All Properties</h5>
+    <div style="
+        position: absolute;
+        right: 10%;
+        top: 30px;
+            ">
+        <a href="/Admin/AdminRole/AddRole" class="btn btn-info">Add New Role</a>
+    </div>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Role ID</th>
+                    <th>Role Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tbody class="table-border-bottom-0">
+                    <tr class="table-dark">
+                        <td><strong>@item.Id</strong></td>
+                        <td>@item.Name</td>
+                        <td>
+                            <div>
+                                <a class="btn btn-warning" href="/Admin/AdminRole/UpdateRole/@item.Id"> Update Role </a>
+                                <a class="btn btn-danger" href="/Admin/AdminRole/DeleteRole/@item.Id"> Delete Role </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+</div>
+<!--/ Contextual Classes -->
+
+<hr class="my-5" />
+

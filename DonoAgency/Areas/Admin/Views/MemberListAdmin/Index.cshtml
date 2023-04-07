@@ -1,0 +1,66 @@
+﻿@using EntityLayer.Concrete
+@model List<AppUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<hr class="my-5" />
+
+<!-- Contextual Classes -->
+
+<div class="card">
+    <h5 class="card-header">User Role List</h5>
+    <div style="
+        position: absolute;
+        right: 10%;
+        top: 30px;
+            ">
+    </div>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tbody class="table-border-bottom-0">
+                    <tr class="table-dark">
+                        <td>
+                            <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                <li data-bs-toggle="tooltip"
+                                    data-popup="tooltip-custom"
+                                    data-bs-placement="top"
+                                    class="avatar avatar-xs pull-up">
+                                    <img src="@item.ImageUrl" alt="Avatar" class="rounded-circle" />
+                                </li>
+                            </ul>
+                        </td>
+                        <td><strong>@item.UserName</strong></td>
+                        <td>@item.Email</td>
+                        <td>@item.PhoneNumber</td>
+                        <td>
+                            <div>
+                                <a class="btn btn-info" href="#"> View Profile </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <a class="btn btn-danger" href="#"> Delete User </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+</div>
+<!--/ Contextual Classes -->
+
+<hr class="my-5" />
+
